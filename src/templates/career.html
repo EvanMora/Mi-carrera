@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ data[5] }}{% endblock %}
+
+{% block body %}
+<form class="career">
+    <h1>{{ data[5] }}</h1>
+    <h3>{{ data[1] }}</h3>
+    <br>
+    <p>Titulo a otorgar</p>
+        <li> {{ data[6] }} </li>
+    <br>
+    <p>Tipo de formacion</p>
+        <li> {{ data[10] }} </li>
+    <br>
+    <p>Nivel academico</p>
+        <li> {{ data[9] }} </li>
+    <br>
+    <p>Reconocimiento del Magisterio</p>
+        <li> {{ data[8] }} </li>
+    <br>
+    <p>Duracion</p>
+        <li> {{ data[13] }}: {{ data[14] }} </li>
+    <br>
+    <p>Modalidad</p>
+        <li> {{ data[11] }} </li>
+    <br>
+    <p>Numero de creditos</p>
+        <li> {{ data[12] }} </li>
+    <br>
+    <p>Costo</p>
+        <li> {{ data[18] }} </li>
+    <span>Codigo SNIES<p>{{ data[4] }}</p></span>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}Elige tu departamento{% endblock %}
+
+{% block body %}
+<form action="/city" method="post">
+    <h1>Elige tu departamento</h1>
+    <select name="departament" id="">
+        {% for i in list_departaments %}
+        <option value="{{ i[0] }}">{{ i[0] }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Siguiente">
+</form>
+{% endblock %}

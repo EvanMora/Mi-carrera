@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}Elige tu carrera{% endblock %}
+
+{% block body %}
+<form action="/unis" method="post">
+    <h1>Elige tu ciudad</h1>
+    <select name="city" id="">
+        {% for i in list_cities %}
+        <option value="{{ i[0] }}">{{ i[0] }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Siguiente">
+</form>
+{% endblock %}

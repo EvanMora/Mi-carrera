@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Carreras disponibles{% endblock %}
+
+{% block body %}
+<form action="/redirect" method="post" class="careers">
+    <h1>Estos son los programas que coinsiden con tu informacion</h1>
+    <p>
+        {% for career in careers %}
+            <label>
+                <input type="radio" name="program" value="{{ career[0] }}">{{ career[1] }}
+            </label><br>
+        {% endfor %}
+    </p>
+    <input type="submit" value="Consultar" class="consultar">
+</form>
+{% endblock %}
